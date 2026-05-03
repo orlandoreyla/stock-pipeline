@@ -7,3 +7,6 @@ Pipeline using Finnhub API + Python + PostgreSQL.
 - PostgreSQL
 - SQL
 - Finnhub API
+
+## libraries
+ pandas, requests, python-dotenv, sqlalchemy
