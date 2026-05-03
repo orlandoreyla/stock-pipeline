@@ -9,4 +9,8 @@ Pipeline using Finnhub API + Python + PostgreSQL.
 - Finnhub API
 
 ## libraries
- pandas, requests, python-dotenv, sqlalchemy
+- pandas, 
+- requests, 
+- python-dotenv, 
+- sqlalchemy
+- psycopg2-binary 
