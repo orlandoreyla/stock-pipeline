@@ -2,13 +2,13 @@ from sqlalchemy import text
 from src.db.connection import engine
 
 ## check for valid stock quote before insertion into the database
-def is_valid_stock_quote(quote):
-    return quote.get("c") is not None and quote.get("c") != 0
+def is_valid_stock_quote(quote_data):
+    return quote_data.get("current_price") is not None and quote_data.get("current_price") != 0
 
 ## Insertion for the stock quote data into the database
-def insert_stock_quote(symbol, quote):
-    if not is_valid_stock_quote(quote):
-        print(f"Invalid stock quote for {symbol}, skipping insertion.")
+def insert_stock_quote(quote_data):
+    if not is_valid_stock_quote(quote_data):
+        print(f"Invalid stock quote for {quote_data.get('symbol')}, skipping insertion.")
         return
     
     with engine.connect() as conn:
@@ -33,16 +33,7 @@ def insert_stock_quote(symbol, quote):
                 :open_price,
                 :previous_close_price
             );
-        """), {
-            "symbol": symbol,
-            "current_price": quote.get("c"),
-            "change_amount": quote.get("d"),
-            "percent_change": quote.get("dp"),
-            "high_price": quote.get("h"),
-            "low_price": quote.get("l"),
-            "open_price": quote.get("o"),
-            "previous_close_price": quote.get("pc")
-        })
+        """), quote_data)
         conn.commit()
         
 ## fetch all of the stock quotes from the database
@@ -70,7 +61,7 @@ def get_latest_stock_quotes(limit=10):
             """
             SELECT * FROM stock_quotes
             ORDER BY created_at DESC
-            LIMIT : limit;
+            LIMIT :limit;
             """
         ),{"limit": limit})
         return result.fetchall()
