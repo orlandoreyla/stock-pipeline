@@ -1,1 +1,2 @@
 connect to DB: sudo -u postgres psql
+\c stock_pipeline -> go to the database

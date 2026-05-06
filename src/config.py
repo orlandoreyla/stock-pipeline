@@ -13,7 +13,7 @@ DB_HOST = os.getenv("DB_HOST")
 DB_PORT = os.getenv("DB_PORT")
 DB_NAME = os.getenv("DB_NAME")
 
-# Validation
+# Validation Empty or not
 if not FINNHUB_API_KEY:
     raise SystemExit("Missing FINNHUB_API_KEY in .env")
 
