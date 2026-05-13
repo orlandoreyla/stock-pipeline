@@ -1,5 +1,3 @@
-
-
 def transform_stock_quote(symbol, quote):
     return {
         "symbol": symbol.upper(),
@@ -10,4 +8,4 @@ def transform_stock_quote(symbol, quote):
         "low_price": quote.get("l"),
         "open_price": quote.get("o"),
         "previous_close_price": quote.get("pc")   
-    }
+    }   

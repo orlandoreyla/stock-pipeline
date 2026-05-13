@@ -1,4 +1,5 @@
 from sqlalchemy import text
+import pandas as pd
 from src.db.connection import engine
 
 ## check for valid stock quote before insertion into the database
@@ -65,5 +66,17 @@ def get_latest_stock_quotes(limit=10):
             """
         ),{"limit": limit})
         return result.fetchall()
+    
+    
+def get_latest_quotes_df(limit=10):
+    with engine.connect() as conn:
+        df = pd.read_sql(text("""
+            SELECT symbol, current_price, percent_change, created_at
+            FROM stock_quotes
+            ORDER BY created_at DESC
+            LIMIT :limit;
+        """), conn, params={"limit": limit})
+
+        return df
     
                             
