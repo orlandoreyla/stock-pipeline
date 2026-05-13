@@ -1,6 +1,7 @@
 from sqlalchemy import text
 import pandas as pd
 from src.db.connection import engine
+from src.utils.logger import logger
 
 ## check for valid stock quote before insertion into the database
 def is_valid_stock_quote(quote_data):
@@ -9,7 +10,7 @@ def is_valid_stock_quote(quote_data):
 ## Insertion for the stock quote data into the database
 def insert_stock_quote(quote_data):
     if not is_valid_stock_quote(quote_data):
-        print(f"Invalid stock quote for {quote_data.get('symbol')}, skipping insertion.")
+        logger.warning(f"Invalid stock quote for {quote_data.get('symbol')}, skipping insertion.")
         return
     
     with engine.connect() as conn:
