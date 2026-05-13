@@ -14,3 +14,4 @@ Pipeline using Finnhub API + Python + PostgreSQL.
 - python-dotenv, 
 - sqlalchemy
 - psycopg2-binary 
+- matplotlib

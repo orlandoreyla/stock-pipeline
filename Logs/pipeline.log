@@ -1,0 +1,10 @@
+2026-05-13 11:36:16,155 - INFO - Ingested quote for AAPL: {'symbol': 'AAPL', 'current_price': 297.85, 'change_amount': 3.05, 'percent_change': 1.0346, 'high_price': 298, 'low_price': 293.5, 'open_price': 294.075, 'previous_close_price': 294.8}
+2026-05-13 11:36:16,290 - INFO - Ingested quote for GOOGL: {'symbol': 'GOOGL', 'current_price': 397.61, 'change_amount': 10.26, 'percent_change': 2.6488, 'high_price': 398.59, 'low_price': 385, 'open_price': 387.7825, 'previous_close_price': 387.35}
+2026-05-13 11:36:16,412 - INFO - Ingested quote for MSFT: {'symbol': 'MSFT', 'current_price': 404.14, 'change_amount': -3.63, 'percent_change': -0.8902, 'high_price': 405.755, 'low_price': 401.03, 'open_price': 405.755, 'previous_close_price': 407.77}
+2026-05-13 11:36:16,567 - INFO - Ingested quote for AMZN: {'symbol': 'AMZN', 'current_price': 267.26, 'change_amount': 1.44, 'percent_change': 0.5417, 'high_price': 267.34, 'low_price': 263.2, 'open_price': 265.935, 'previous_close_price': 265.82}
+2026-05-13 11:36:16,695 - INFO - Ingested quote for TSLA: {'symbol': 'TSLA', 'current_price': 452.21, 'change_amount': 18.76, 'percent_change': 4.3281, 'high_price': 453.3, 'low_price': 430.21, 'open_price': 436.3225, 'previous_close_price': 433.45}
+2026-05-13 11:37:17,483 - INFO - Ingested quote for AAPL
+2026-05-13 11:37:17,588 - INFO - Ingested quote for GOOGL
+2026-05-13 11:37:17,700 - INFO - Ingested quote for MSFT
+2026-05-13 11:37:17,831 - INFO - Ingested quote for AMZN
+2026-05-13 11:37:17,937 - INFO - Ingested quote for TSLA
