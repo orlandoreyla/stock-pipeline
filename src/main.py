@@ -4,19 +4,22 @@ from src.db.stock_repository import insert_stock_quote, get_all_stock_quotes, ge
 from src.transformations.quote_transformer import transform_stock_quote
 from src.analysis.stock_analysis import calculate_average_price, get_top_gainers
 from src.visualization.stock_charts import plot_latest_prices
+from src.pipeline.stock_pipeline import ingest_stock_quotes
 
 def main():
+    create_tables()
+    
+    symbols = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'TSLA']
+    ingest_stock_quotes(symbols)
+
     df = get_latest_quotes_df()
-
-    avg_price = calculate_average_price(df)
-    top_gainer = get_top_gainers(df)
-
-    print("\nAverage Price:")
-    print(avg_price)
-
-    print("\nTop Gainer:")
-    print(top_gainer)
-
+    
+    print("\nAverage Price: ")
+    print(calculate_average_price(df))
+    
+    print("\nTop Gainers: ")
+    print(get_top_gainers(df))
+    
     plot_latest_prices(df)
 
 if __name__ == "__main__":
