@@ -5,11 +5,12 @@ from src.transformations.quote_transformer import transform_stock_quote
 from src.analysis.stock_analysis import calculate_average_price, get_top_gainers
 from src.visualization.stock_charts import plot_latest_prices
 from src.pipeline.stock_pipeline import ingest_stock_quotes
+from src.utils.stock_loader import load_stock_symbols
 
 def main():
     create_tables()
     
-    symbols = ['AAPL', 'GOOGL', 'MSFT', 'AMZN', 'TSLA']
+    symbols = load_stock_symbols()
     ingest_stock_quotes(symbols)
 
     df = get_latest_quotes_df()
