@@ -37,6 +37,7 @@ def insert_stock_quote(quote_data):
             );
         """), quote_data)
         conn.commit()
+        return True
         
 ## fetch all of the stock quotes from the database
 def get_all_stock_quotes():

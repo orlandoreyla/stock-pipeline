@@ -21,3 +21,19 @@
 2026-05-13 12:49:50,810 - INFO - Ingested quote for TSLA
 2026-05-13 12:49:50,911 - INFO - Ingested quote for DIS
 2026-05-13 12:49:51,058 - INFO - Ingested quote for FAKESTOCK123
+2026-05-13 12:57:18,513 - WARNING - Quote for AAPL was not inserted due to validation failure.
+2026-05-13 12:57:18,620 - WARNING - Quote for MSFT was not inserted due to validation failure.
+2026-05-13 12:57:18,731 - WARNING - Quote for GOOGL was not inserted due to validation failure.
+2026-05-13 12:57:18,840 - WARNING - Quote for AMZN was not inserted due to validation failure.
+2026-05-13 12:57:18,945 - WARNING - Quote for TSLA was not inserted due to validation failure.
+2026-05-13 12:57:19,048 - WARNING - Quote for DIS was not inserted due to validation failure.
+2026-05-13 12:57:19,171 - WARNING - Invalid stock quote for FAKESTOCK123, skipping insertion.
+2026-05-13 12:57:19,171 - WARNING - Quote for FAKESTOCK123 was not inserted due to validation failure.
+2026-05-13 12:58:41,685 - INFO - Ingested quote for AAPL
+2026-05-13 12:58:41,808 - INFO - Ingested quote for MSFT
+2026-05-13 12:58:41,928 - INFO - Ingested quote for GOOGL
+2026-05-13 12:58:42,036 - INFO - Ingested quote for AMZN
+2026-05-13 12:58:42,149 - INFO - Ingested quote for TSLA
+2026-05-13 12:58:42,294 - INFO - Ingested quote for DIS
+2026-05-13 12:58:42,586 - WARNING - Invalid stock quote for FAKESTOCK123, skipping insertion.
+2026-05-13 12:58:42,586 - WARNING - Quote for FAKESTOCK123 was not inserted due to validation failure.
